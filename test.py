@@ -4,4 +4,3 @@ print('hello world!!!')
 #안녕하세요. 저는 맥북입니다.
 #hello world 따라할게용
 #hello
-#홍지우 바보~~~~~
