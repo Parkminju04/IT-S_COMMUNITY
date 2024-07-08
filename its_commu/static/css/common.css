@@ -1,0 +1,171 @@
+/* 
+font-weight
+Light: 300 / Regular: 400(normal) - 기본 상태 / Medium: 500 / SemiBold: 600 / Bold: 700(bold) 
+*/
+
+/* 폰트 설정 */
+@font-face {
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Pretendard-Light.eot');
+  src: url('../fonts/Pretendard-Light.woff') format('woff'),
+  url('../fonts/Pretendard-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Pretendard-Regular.eot');
+  src: url('../fonts/Pretendard-Regular.woff') format('woff'),
+  url('../fonts/Pretendard-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Pretendard-Medium.eot');
+  src: url('../fonts/Pretendard-Medium.woff') format('woff'),
+  url('../fonts/Pretendard-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Pretendard-SemiBold.eot');
+  src: url('../fonts/Pretendard-SemiBold.woff') format('woff'),
+  url('../fonts/Pretendard-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Pretendard-Bold.eot');
+  src: url('../fonts/Pretendard-Bold.woff') format('woff'),
+  url('../fonts/Pretendard-Bold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* 컬러 변수 */
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-grey1: #606060;
+  --color-grey2: #8D8D8D;
+  --color-grey3: #D9D9D9;
+  --color-green: #197533;
+  --color-red: #FF3D00;
+  --color-yellow: #FFB800;
+}
+
+/* 반응형, 모바일에서 모든 요소의 패딩과 선을 크기 안에 포함 */
+*,
+::before,
+::after {
+  /* padding, border 값을 width 값으로 포함 */
+  box-sizing: border-box;
+}
+
+/* body에 들어갈 수 있는 모든 태그의 여백 제거 */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+address,
+code,
+em,
+img,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+/* 리스트 기호 제거 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 앵커 링크 밑줄 제거, 글씨 색상 변경 */
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+/* button 태그에 손 모양 커서 */
+button {
+  cursor: pointer;
+}
+
+/* 폰트 크기를 body 폰트 크기와 동일시 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+/* textarea 리사이즈 막기 */
+textarea {
+  resize: none;
+}

@@ -1,1 +1,80 @@
-/*여기는 기본 파일인 base.css입니다.*/
+/* 헤더 디자인 */
+header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-black);
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 100;
+}
+
+#header_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.logo img {
+  width: 70px;
+  height: 50px;
+  background-color: var(--color-grey3);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 60px;
+}
+
+nav ul li a:hover {
+  color: var(--color-green);
+}
+
+.login-btn button {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.login-btn button:hover {
+  background-color: var(--color-green);
+}
+
+
+/* 메인 디자인 */
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* 푸터 디자인 */
+footer {
+  background-color: var(--color-grey3);
+  width: 100%;
+}
+
+#footer_inner {
+  max-width: 1200px;
+  margin: 200px auto 0 auto;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+  font-weight: 300;
+  font-size: 14px;
+}
