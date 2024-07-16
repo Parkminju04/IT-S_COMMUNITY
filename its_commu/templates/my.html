@@ -7,5 +7,109 @@
 {% endblock %}
 
 {% block content %}
-<!--메인 콘텐츠 작성-->
+    <div class ="profile">
+        <div class="profile-title">
+            <h2>프로필</h2>
+        </div>
+        <div class ="profile-box">
+            <div class="profile-member">
+                <div class="profile-face">
+                    <div class="user"><img src="{% static 'images/userimg.png' %}" alt="프로필 이미지"></div>
+                </div>
+                <div class="profile-textbox">
+                    <div class="profile-text1">
+                        <div class="pro-t1"><h1>홍길동</h1></div>
+                        <div class="pro-t2"><h1>님 안녕하세요.</h1></div>
+                    </div>
+                    <div class="profile-text2">
+                        <i class="bi bi-box-arrow-right"></i><div class="pro-t3"></i><h1>로그아웃</h1></div>
+                        <i class="bi bi-gear"></i><div class="pro-t4"><h1>설정</h1></div>
+                    </div>
+                </div> 
+            </div>
+        </div>         
+    </div>
+    <div class ="write">
+        <div class="write-title">
+            <h2>내가 쓴 글</h2>
+            <div class="write-title2">
+                <h1>더보기</h1>
+                <i class="bi bi-plus-circle"></i>
+            </div>
+        </div>
+        <hr>
+        <div class ="write-box1">
+            <div class="write-text1">
+                <div class="wri-t1"><h1>공지사항</h1></div>
+                <div class="wri-t2"><h1>아이티스 관련 제목입니다</h1></div>
+                <div class="wri-t3"><h1>2024.01.01</h1></div>
+            </div> 
+        </div>
+        <div class ="write-box2">
+            <div class="write-text2">
+                <div class="wri-t4"><h1>Q&A</h1></div>
+                <div class="wri-t5"><h1>아이티스 관련 제목입니다</h1></div>
+                <div class="wri-t6"><h1>2024.01.01</h1></div>
+            </div> 
+        </div>
+    </div>
+    <div class ="comment">
+        <div class="comment-title">
+            <h2>댓글 단 글</h2>
+            <div class="comment-title2">
+                <h1>더보기</h1>
+                <i class="bi bi-plus-circle"></i>
+            </div>
+        </div>
+        <hr>
+        <div class ="comment-box1">
+            <div class="comment-text1">
+                <div class="com-t1"><h1>Q&A</h1></div>
+                <div class="com-t2"><h1>아이티스 관련 제목입니다</h1></div>
+                <div class="com-t3"><h1>2024.01.01</h1></div>
+            </div> 
+        </div>
+    </div>
+    <div class ="like">
+        <div class="like-title">
+            <h2>좋아요한 글</h2>
+            <div class="like-title2">
+                <h1>더보기</h1>
+                <i class="bi bi-plus-circle"></i>
+            </div>
+        </div>
+        <hr>
+        <div class ="like-box1">
+            <div class="like-text1">
+                <div class="like-t1">
+                <i class="bi bi-exclamation-circle"></i>
+                <h1>좋아요한 글이 없습니다.</h1>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class ="bookmark">
+        <div class="bookmark-title">
+            <h2>내가 쓴 글</h2>
+            <div class="bookmark-title2">
+                <h1>더보기</h1>
+                <i class="bi bi-plus-circle"></i>
+            </div>
+        </div>
+        <hr>
+        <div class ="bookmark-box1">
+            <div class="bookmark-text1">
+                <div class="bmk-t1"><h1>Talk</h1></div>
+                <div class="bmk-t2"><h1>아이티스 관련 제목입니다</h1></div>
+                <div class="bmk-t3"><h1>2024.01.01</h1></div>
+            </div> 
+        </div>
+        <div class ="bookmark-box2">
+            <div class="bookmark-text2">
+                <div class="bmk-t4"><h1>Q&A</h1></div>
+                <div class="bmk-t5"><h1>아이티스 관련 제목입니다</h1></div>
+                <div class="bmk-t6"><h1>2024.01.01</h1></div>
+            </div> 
+        </div>
+    </div>
 {% endblock %}
