@@ -99,6 +99,7 @@
   background-color: #218838;
 } */
 
+
 .modal-content a {
   color: var(--color-grey2);
   margin-right:10px;
@@ -106,6 +107,7 @@
   font-weight: 400;
   font-size: 11px;
 }
+
 
 /* .modal-content a:hover {
   text-decoration: underline;
