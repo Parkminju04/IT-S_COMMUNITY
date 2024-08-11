@@ -1,5 +1,125 @@
-<div class ="setting">
-    <div class="setting-title">
-        <h2>설정</h2>
+{% extends "base.html" %}
+
+{% block extra_head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/my_setting.css' %}" />
+<script src="{% static 'js/my_setting.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<!--메인 콘텐츠 작성-->
+<div class="my_setting">
+    <div class ="setting">
+        <div class="setting-title">
+            <h2>설정</h2>
+        </div>
+        <!-- <hr> -->
     </div>
+    <div class="profile">
+        <div class="user"><img src="{% static 'images/userimg.png' %}" alt="프로필 이미지"></div>
+    </div>
+    <form id="form-setting" method="post" action="">
+        <div class="setup">
+            <div class="change">
+                <div class="change-title" id="modify">
+                    <h2>이름</h2>
+                </div>
+                <input type="text" id="name" name="name" placeholder="홍길동" required>
+                <div class="change-title" id="modify">
+                    <h2>아이디</h2>
+                </div>
+                <input type="text" id="username" name="username" placeholder="itslove1234" required>
+                <div class="change-title" id="modify">
+                    <h2>학번</h2>
+                </div>
+                <input type="text" id="studentnum" name="studentnum" placeholder="242424" required>
+                <div class="change-title" id="modify">
+                    <h2>생년월일</h2>
+                </div>
+                <input type="date" id="date" name="date" placeholder="2024.01.01" required>
+                <div class="change-title" id="modify">
+                    <h2>전화번호</h2>
+                </div>
+                <input type="text" id="phonenum" name="phonenum" placeholder="010-1234-5678" required>
+                <div class="change-title" id="modify">
+                    <h2>이메일</h2>
+                </div>
+                <input type="email" id="email" name="email" placeholder="이메일" required>
+                <div class="change-title" id="modify">
+                    <h2>깃허브</h2>
+                </div>
+                <input type="text" id="github" name="github" placeholder="깃허브주소" required>
+                <div class="change-title" id="choice">
+                    <h2>참여년도</h2>
+                    <div class="change-box">
+                        <div class="tags" id="years">
+                            <span class="tag">#2024</span>
+                            <span class="tag">#2023</span>
+                            <span class="tag">#2022</span>
+                        </div>
+                    </div> 
+                </div>
+                <div class="change-title" id="choice">
+                    <h2>관심분야</h2>
+                    <div class="change-box">
+                        <div class="tags" id="interests">
+                            <span class="tag">#UI/UXDesign</span>
+                            <span class="tag">#Front-End</span>
+                            <span class="tag">#Back-End</span>
+                            <span class="tag">#Network</span>
+                            <span class="tag">#Cloud</span>
+                            <span class="tag">#Server</span>
+                            <span class="tag">#AI</span>
+                            <span class="tag">#IOT</span>
+                            <span class="tag">#DevOps</span>
+                        </div>
+                    </div> 
+                </div>
+                <div class="change-title" id="choice">
+                    <h2>기술스택</h2>
+                    <div class="change-box">
+                        <div class="tags" id="tech-stack">
+                            <span class="tag">#C</span>
+                            <span class="tag">#Python</span>
+                            <span class="tag">#JAVA</span>
+                            <span class="tag">#HTML</span>
+                            <span class="tag">#CSS</span>
+                            <span class="tag">#JavaScript</span>
+                            <span class="tag">#Spring</span>
+                            <span class="tag">#React</span>
+                            <span class="tag">#Django</span>
+                            <span class="tag">#R</span>
+                        </div>
+                    </div>             
+                </div>
+                <div class="change-title" id="modify">
+                    <h2>자기소개</h2>
+                </div>
+                <input type="text" id="intro" name="intro" placeholder="자기소개" required>
+                
+            </div>
+            <div class="system">
+                <div class="sys-content" id="passward">
+                    <a href="#">비밀번호 변경</a>
+                    <a href="#"><i class="bi bi-chevron-right"></i></a>
+                </div>
+                <div class="sys-content" id="alarm">
+                    <a href="#">알람 설정</a> 
+                    <a href="#"><i class="bi bi-chevron-right"></i></a>
+                </div>
+                <div class="sys-content" id="withdrawal">
+                    <a href="#">탈퇴하기</a>
+                    <a href="#"><i class="bi bi-chevron-right"></i></a>
+                </div>        
+            </div>
+            <button class="complete" type="submit">완료</button>    
+        </div>
+    </form> 
 </div>
+
+
+
+          
+         
+
+{% endblock %}
