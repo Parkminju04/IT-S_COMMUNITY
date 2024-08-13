@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'board',
     'user',
+    'comment',
+    'community',
+    'comp',
+    'it_plan',
+    'it_prj',
 ]
 
 MIDDLEWARE = [
