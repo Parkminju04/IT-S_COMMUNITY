@@ -18,12 +18,16 @@
                 </div>
                 <div class="profile-textbox">
                     <div class="profile-text1">
-                        <div class="pro-t1"><h1>홍길동</h1></div>
+                        <div class="pro-t1"><h1>{{user.username}}</h1></div>
                         <div class="pro-t2"><h1>님 안녕하세요.</h1></div>
                     </div>
                     <div class="profile-text2">
-                        <a href="#"><i class="bi bi-box-arrow-right"></i><div class="pro-t3"><h1>로그아웃</h1></div></a>
-                        <a href="{% url 'my_setting' %}"><i class="bi bi-gear"></i><div class="pro-t4"><h1>설정</h1></div></a>
+                        <i class="bi bi-box-arrow-right"></i>
+                        <form action="{% url 'logout' %}" method="post">
+                            {% csrf_token %}
+                            <input type="submit" value="로그아웃" />
+                        </form><div class="pro-t3"></div>
+                        <a href="{% url 'my_setting' %}"><i class="bi bi-gear"></i><div class="pro-t4"><h1>설정</h1></div></a></div>
                     </div>
                 </div> 
             </div>
