@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  <script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+  <div class="visual">
+    <div class="visual-text">
+      <h2>한양여자대학교 소프트웨어융합과 과동아리</h2>
+      <h1>IT's 아이티스</h1>
+    </div>
+    <div class="visual-circle">
+      <div class="circle circleA">
+        <h2>PROJECT</h2>
+      </div>
+      <div class="circle circleB">
+        <h2>PRESENTATION</h2>
+      </div>
+      <div class="circle circleC">
+        <h2>CERTIFICATE</h2>
+      </div>
+      <div class="circle circleD">
+        <h2>STUDY</h2>
+      </div>
+    </div>
+  </div>
+{% endblock %}

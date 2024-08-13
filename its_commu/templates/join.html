@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/join.css' %}" />
+<script src="{% static 'js/join.js' %}"></script> 
+{% endblock %}
+
+{% block content %}
+  <div class="title_wrap">
+    <span class="title">회원가입</span>
+    <hr>
+  <div>
+
+  <div class="content_wrap">
+    <form id="form_join" method="post" action="">
+      <div class="form_list">
+        <div class="form_item id">
+          <input type="text" name="id" placeholder="아이디" required><br>
+          <div>
+            <button type="button" class="check-id" onclick="checkID()">중복확인</button>
+            <span class="id-status" id="id-Status">사용 가능한 아이디입니다.</span>
+          </div>
+          
+        </div>
+        <div class="form_item passwd">
+          <input type="password" name="passwd" placeholder="비밀번호" required>
+        </div>
+        <div class="form_item passwd_ck">
+          <input type="password" name="ck_passwd" placeholder="비밀번호 확인" required>
+        </div>
+      </div>
+
+      <div class="form_list">
+        <div class="form_item name">
+          <input type="text" name="name" placeholder="이름" required>
+        </div>
+        <div class="form_item grade">
+          <input type="text" name="grade" placeholder="학번" required>
+        </div>
+        <div class="form_item b_day">
+          <input type="date" name="b_day" placeholder="생년월일" required>
+        </div>
+        <div class="form_item tel">
+          <input type="text" name="tel" placeholder="전화번호" required>
+        </div>
+        <div class="form_item email">
+          <input type="email" name="email" placeholder="이메일" required>
+        </div>
+        <div class="form_item git">
+          <input type="text" name="git" placeholder="깃허브 주소" required>
+        </div>
+      </div>
+      
+      <div class="form_list">
+        <div class="form_select s_grade">
+          <label>참여년도 선택</label><br>
+          <hr class="line">
+          <div class="toggle-button" date-value="2021"><span>#2021</span></div>
+          <div class="toggle-button" date-value="2022"><span>#2022</span></div>
+          <div class="toggle-button" date-value="2023"><span>#2023</span></div>
+          <div class="toggle-button" date-value="2024"><span>#2024</span></div>
+          <div class="toggle-button" date-value="2025"><span>#2025</span></div>
+        </div>
+  
+        <div class="form_select s_interest">
+          <label>관심분야 선택</label><br>
+          <hr class="line">
+          <div class="toggle-button" date-value="UIUXDesign"><span>#UIUXDesign</span></div>
+          <div class="toggle-button" date-value="Front-End"><span>#Front-End</span></div>
+          <div class="toggle-button" date-value="Back-End"><span>#Back-End</span></div>
+          <div class="toggle-button" date-value="Network"><span>#Network</span></div>
+          <div class="toggle-button" date-value="Cloud"><span>#Cloud</span></div>
+          <div class="toggle-button" date-value="Server"><span>#Server</span></div>
+          <div class="toggle-button" date-value="Al"><span>#Al</span></div>
+          <div class="toggle-button" date-value="IOT"><span>#IOT</span></div>
+          <div class="toggle-button" date-value="DevOps"><span>#DevOps</span></div>
+        </div>
+
+        <div class="form_select s_skill">
+          <label>기술스택 선택</label><br>
+          <hr class="line">
+          <div class="toggle-button" date-value="C"><span>C</span></div>
+          <div class="toggle-button" date-value="Python"><span>Python</span></div>
+          <div class="toggle-button" date-value="JAVA"><span>JAVA</span></div>
+          <div class="toggle-button" date-value="HTML"><span>HTML</span></div>
+          <div class="toggle-button" date-value="CSS"><span>CSS</span></div>
+          <div class="toggle-button" date-value="JavaScript"><span>JavaScript</span></div>
+          <div class="toggle-button" date-value="Spring"><span>Spring</span></div>
+          <div class="toggle-button" date-value="React"><span>React</span></div>
+          <div class="toggle-button" date-value="Django"><span>Django</span></div>
+          <div class="toggle-button" date-value="R"><span>R</span></div>
+        </div>
+
+        <div class="form_item intro">
+          <textarea name="intro" id="intro" placeholder="자기소개"></textarea>
+        </div>
+      </div>
+      <button class="sub_btn" type="submit">회원가입</button>
+    </form>
+  </div>
+
+{% endblock %}

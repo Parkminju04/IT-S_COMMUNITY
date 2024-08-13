@@ -1,13 +1,55 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>IT's Web</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/common.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/login_modal.css' %}" />
+    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% static 'js/login_modal.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    {% block extra_head %}
+    {% endblock %}
 </head>
 <body>
-    <h1> 가장 기본이 되는 페이지 입니다. </h1>
+    <header>
+        <div id="header_inner">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'images/' %}" alt="아이티스 로고"></a>
+            </div>
+            <nav>
+            {% if user.is_authenticated %}
+                <ul>
+                    <li><a href="{% url 'info' %}">소개</a></li>
+                    <li><a href="{% url 'board' %}">게시판</a></li>
+                    <li><a href="{% url 'my' %}">마이페이지</a></li>
+                </ul>
+            {% else %}
+                <ul>
+                    <li><a href="{% url 'info' %}">소개</a></li>
+                    <li><a href="{% url 'board' %}">게시판</a></li>
+                    <li class="login-btn"><button onclick="">로그인</button></li>
+                </ul>
+            {% endif %}
+            </nav>
+            {% include 'login_modal.html' %}
+        </div>
+    </header>
+    
+    <main>
+        <div id="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        <div id="footer_inner">
+            <p>&copy; 한양여자대학교 소프트웨어융합과 과동아리 아이티스</p>
+        </div>
+    </footer>
 </body>
 </html>
